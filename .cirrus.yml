@@ -12,5 +12,5 @@ test_task:
     test_script: cargo test
     before_cache_script:
       - rm -rf target/debug/incremental
-      - find target/ -name "*$CIRRUS_REPO_NAME*" -type d -delete
+      - find target/ -name "*$CIRRUS_REPO_NAME*" -type d -exec rm -rf {} +
       - find target/ -name "*$CIRRUS_REPO_NAME*" -type f -delete
