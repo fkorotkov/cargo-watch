@@ -13,4 +13,4 @@ test_task:
     before_cache_script:
       - rm target/.rustc_info.json
       - rm -rf target/debug/incremental
-      - find target/ -name ".*$CIRRUS_REPO_NAME.*" -type f -iname -delete
+      - find target/ -name "*$CIRRUS_REPO_NAME*" -type f -iname -delete
