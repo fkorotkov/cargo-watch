@@ -1,0 +1,9 @@
+container:
+    image: rust:latest
+
+test_task:
+    cargo_cache:
+        folder: ~/.cargo
+        fingerprint_script: cat Cargo.lock
+    build_script: cargo build
+    test_script: cargo test
