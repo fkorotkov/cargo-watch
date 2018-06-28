@@ -5,5 +5,5 @@ test_task:
     cargo_cache:
         folder: ~/.cargo
         fingerprint_script: cat Cargo.lock
-    build_script: cargo build
+    build_script: cargo build --verbose
     test_script: cargo test
