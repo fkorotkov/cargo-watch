@@ -48,6 +48,10 @@ fn get_command(debug: bool, matches: &ArgMatches) -> String {
         println!(">>> Commands: {:?}", commands);
     }
 
+    if debug {
+        println!(">>> Comma: {:?}", commands);
+    }
+
     if !matches.is_present("quiet") {
         let start = {
             format!("echo [Running '{}']", commands.join(" && "))
