@@ -11,6 +11,6 @@ test_task:
     build_script: cargo build --verbose
     test_script: cargo test
     before_cache_script:
-      - rm target/.rustc_info.json
       - rm -rf target/debug/incremental
+      - find target/ -name "*$CIRRUS_REPO_NAME*" -type d -delete
       - find target/ -name "*$CIRRUS_REPO_NAME*" -type f -delete
